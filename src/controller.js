@@ -1,17 +1,26 @@
-import { pageLoader } from "./pageCreator.js";
+import { pageLoader, removeChildren } from "./pageCreator";
 
 let theCurrentPage = "homePage";
 
 let goodOrBadHeader = "good";
 let goodOrBadPage = "good";
 
-pageLoader(theCurrentPage, goodOrBadHeader, goodOrBadPage);
+function startPage() {
+  pageLoader(theCurrentPage, goodOrBadHeader, goodOrBadPage);
+}
 
 const btnActiveded = {
-  changepage: {},
-  header: {},
+  changepage: function (pageName) {
+    theCurrentPage = pageName;
+    removeChildren(document.body);
+    startPage();
+  },
+  goodOrBadHeader: function (goodOrBad) {
+    goodOrBadHeader = goodOrBad;
+    removeChildren(document.body);
+    startPage();
+  },
   homepage: {},
 };
 
-export default btnActiveded;
-export { goodOrBadPage, goodOrBadHeader };
+export { btnActiveded, startPage };

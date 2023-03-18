@@ -1,8 +1,8 @@
-import btnActiveded from "../controller.js";
+import { btnActiveded } from "../controller";
 
 const createHomepage = function (goodOrBad) {
   const homePageEl = document.createElement("div");
-  homePageEl.classList.add("headerEl");
+  homePageEl.classList.add("homePageEl");
 
   if (goodOrBad === "bad") {
     homePageEl.appendChild(createBadHomepage());

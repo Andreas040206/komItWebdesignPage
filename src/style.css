@@ -1,8 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;900&display=swap");
+
+body {
+  margin: 0px;
+  font-family: "Open Sans", sans-serif;
+  height: 200vh;
+}
+
+.infoDot {
+  width: 30px;
+  height: 30px;
+  border-radius: 25px;
+  background-color: #d9d9d9ff;
+  position: absolute;
+  transition: 0.5s;
+}
+
+.infoDot:hover {
+  width: 650px;
+  height: 650px;
+  padding: 10px;
+  background-color: black;
+}
+
+.infoCon {
+  width: 650px;
+  height: 650px;
+  border-radius: 20px;
+}
+
+.infoDot1 {
+  top: 55px;
+  left: 28px;
+}
+
+.infoDot1Image {
+  height: 30px;
+  width: 30px;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.infoDot1Image:hover {
+  height: 650px;
+  width: 650px;
+  opacity: 1;
+}
+
+.infoDot2 {
+  top: 146px;
+  right: calc(14vw + 1355px);
+}
+
 /* header */
 
 /* Shared Header */
 .headerCon {
-  height: 300px;
+  height: 200px;
   display: flex;
   flex-direction: column;
 }
@@ -12,9 +65,99 @@
 /* Good header */
 .goodHeaderCon {
 }
+
+.headerUpper {
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logoWithTextCon {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  padding-top: 30px;
+  padding-left: 70px;
+  user-select: none;
+}
+
+.logoHeader {
+  font-size: 60px;
+  height: 68px;
+}
+
+.logoText {
+  font-size: 30px;
+  color: #666666;
+  align-self: flex-end;
+}
+
+.headerSwitchCon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 15px;
+  margin-right: 2vw;
+}
+
+.goodHeaderSwitch {
+  height: 65px;
+  width: auto;
+}
+
+.goodSwitchBall {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background-color: #d9d9d9ff;
+  position: fixed;
+  right: calc(2vw + 70px);
+  top: 47px;
+  transition: 0.3s;
+}
+
+.headerMid {
+  height: 35%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: row;
+  padding-right: calc(14vw - 200px);
+}
+
+.headerMidCon {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.menuBtn {
+  font-size: 30px;
+  padding: 6px 40px;
+  transition: 0.2s;
+  user-select: none;
+}
+
+.menuBtn:hover {
+  background-color: rgb(227, 227, 227);
+}
+
+.selectedMenuBtn {
+  border-bottom: solid gray 4px;
+  transition: 0.2s;
+}
+
+.headerLower {
+  height: 5%;
+  background-color: black;
+}
 /* Good header */
 
 /* Bad Header */
+
+.badHeaderCon {
+  background-color: #0099ff;
+}
 
 /* Bad Header end*/
 

@@ -1,6 +1,6 @@
-import { createHeaderElement } from "./pageEl/header.js";
-import { createHomepage } from "./pageEl/homepage.js";
-import btnActiveded from "./controller.js";
+import { first } from "lodash";
+import { createHeaderElement } from "./pageEl/header";
+import { createHomepage } from "./pageEl/homepage";
 
 const pageLoader = function (currentPage, goodOrBadHeader, goodOrBadPage) {
   const entirePage = document.createElement("div");
@@ -17,4 +17,10 @@ const pageLoader = function (currentPage, goodOrBadHeader, goodOrBadPage) {
   document.body.appendChild(entirePage);
 };
 
-export { pageLoader };
+const removeChildren = function (parrent) {
+  while (parrent.firstChild) {
+    parrent.removeChild(parrent.firstChild);
+  }
+};
+
+export { pageLoader, removeChildren };

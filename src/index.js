@@ -1,2 +1,5 @@
 import _ from "lodash";
-import { pageLoader } from "./pageCreator";
+import { startPage } from "./controller";
+import "./style.css";
+
+startPage();
