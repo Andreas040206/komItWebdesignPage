@@ -1,0 +1,21 @@
+/* header */
+
+/* Shared Header */
+.headerCon {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Shared Header end*/
+
+/* Good header */
+.goodHeaderCon {
+}
+/* Good header */
+
+/* Bad Header */
+
+/* Bad Header end*/
+
+/* header End */
