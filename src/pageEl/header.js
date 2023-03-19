@@ -1,6 +1,5 @@
 import { btnActiveded } from "../controller";
-import goodSwitch from "../img/goodHeaderSwitch.png";
-import { removeChildren } from "../pageCreator";
+import { removeChildren, createSwitch } from "../pageCreator";
 import infoDot1Img from "../img/infoDot1.png";
 
 const createHeaderElement = function (currentPage, goodOrBad) {
@@ -37,28 +36,8 @@ const createGoodHeaderEl = function (currentPage) {
   logoWithText.appendChild(logoHeader);
   logoWithText.appendChild(logoText);
 
-  const headerSwitchCon = document.createElement("div");
-  headerSwitchCon.classList.add("headerSwitchCon");
-
-  let headerSwitch = new Image();
-  headerSwitch.classList.add("goodHeaderSwitch");
-  headerSwitch.src = goodSwitch;
-
-  let goodSwitchBall = document.createElement("div");
-  goodSwitchBall.classList.add("goodSwitchBall");
-
-  headerSwitchCon.appendChild(goodSwitchBall);
-  headerSwitchCon.appendChild(headerSwitch);
-
-  headerSwitchCon.addEventListener("click", function () {
-    goodSwitchBall.style.right = "calc(2vw + 24px)";
-    setTimeout(() => {
-      btnActiveded.goodOrBadHeader("bad");
-    }, 300);
-  });
-
   headerUpper.appendChild(logoWithText);
-  headerUpper.appendChild(headerSwitchCon);
+  headerUpper.appendChild(createSwitch("header", "good"));
 
   // creating the mid part of the header
   const headerMid = document.createElement("div");
@@ -181,6 +160,8 @@ const createGoodHeaderEl = function (currentPage) {
 const createBadHeaderEl = function (currentPage) {
   const el = document.createElement("div");
   el.classList.add("badHeaderCon", "headerCon");
+
+  el.appendChild(createSwitch("header", "bad"));
 
   return el;
 };

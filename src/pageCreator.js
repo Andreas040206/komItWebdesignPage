@@ -3,6 +3,7 @@ import { createHeaderElement } from "./pageEl/header";
 import { createHomepage } from "./pageEl/homepage";
 import { createFlowchartPage } from "./pageEl/flowchart";
 import goodSwitch from "./img/goodHeaderSwitch.png";
+import badSwitch from "./img/badHeaderSwitch.png";
 import { btnActiveded } from "./controller";
 
 const pageLoader = function (currentPage, goodOrBadHeader, goodOrBadPage) {
@@ -30,51 +31,49 @@ const removeChildren = function (parrent) {
 
 const createSwitch = function (pageOrHeader, goodOrBad) {
   const headerSwitchCon = document.createElement("div");
-  headerSwitchCon.classList.add("headerSwitchCon");
+  headerSwitchCon.classList.add("switchCon");
 
-  let headerSwitch = new Image();
-  headerSwitch.classList.add("goodHeaderSwitch");
-  headerSwitch.src = goodSwitch;
+  let ball = document.createElement("div");
+  ball.classList.add("switchBall");
 
-  let goodSwitchBall = document.createElement("div");
+  let switchBorder = document.createElement("div");
+  switchBorder.classList.add("switchBorder");
+
+  headerSwitchCon.appendChild(switchBorder);
+  headerSwitchCon.appendChild(ball);
 
   if (goodOrBad === "bad") {
-    goodSwitchBall.classList.add("goodSwitchBall", "pageSwitch");
-  } else if (goodOrBad === "good") {
-    goodSwitchBall.classList.add(
-      "goodSwitchBall",
-      "badSwitchBall",
-      "pageSwitch"
-    );
+    ball.classList.add("badSwitchBall");
+    headerSwitchCon.addEventListener("click", function () {
+      ball.style.right = "70px";
+      setTimeout(() => {
+        if (pageOrHeader === "page") {
+          btnActiveded.goodOrBadPage("good");
+          console.log("page turn good");
+        } else {
+          btnActiveded.goodOrBadHeader("good");
+          console.log("header turn good");
+        }
+      }, 300);
+    });
+  } else {
+    headerSwitchCon.addEventListener("click", function () {
+      ball.style.right = "22px";
+      setTimeout(() => {
+        if (pageOrHeader === "page") {
+          btnActiveded.goodOrBadPage("bad");
+          console.log("page turn bad");
+        } else {
+          btnActiveded.goodOrBadHeader("bad");
+          console.log("header turn bad");
+        }
+      }, 300);
+    });
   }
-
-  headerSwitchCon.appendChild(goodSwitchBall);
-  headerSwitchCon.appendChild(headerSwitch);
-
   if (pageOrHeader === "page") {
     headerSwitchCon.classList.add("pageSwitchCon");
-    headerSwitchCon.addEventListener("click", function () {
-      if (goodOrBad === "bad") {
-        goodSwitchBall.style.right = "calc(2vw + 24px)";
-      } else {
-        goodSwitchBall.style.right = "calc(2vw + 70px)";
-      }
-      setTimeout(() => {
-        btnActiveded.goodOrBadPage(goodOrBad);
-      }, 300);
-    });
-  } else if (pageOrHeader === "header") {
-    headerSwitchCon.addEventListener("click", function () {
-      if (goodOrBad === "bad") {
-        goodSwitchBall.style.right = "calc(2vw + 24px)";
-      } else {
-        goodSwitchBall.style.right = "calc(2vw + 70px)";
-      }
-      setTimeout(() => {
-        btnActiveded.goodOrBadHeader(goodOrBad);
-      }, 300);
-    });
   }
+
   return headerSwitchCon;
 };
 

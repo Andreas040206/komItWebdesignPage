@@ -46,7 +46,7 @@ const createGoodFlowchartPage = function () {
 
   part1Flowchart.appendChild(filler);
   part1Flowchart.appendChild(part1MidContet);
-  part1Flowchart.appendChild(createSwitch("page", "bad"));
+  part1Flowchart.appendChild(createSwitch("page", "good"));
 
   //appening all parts
   content.appendChild(part1Flowchart);
@@ -71,7 +71,7 @@ const createBadFlowchartPage = function () {
 
   part1Flowchart.appendChild(filler);
   part1Flowchart.appendChild(part1MidContet);
-  part1Flowchart.appendChild(createSwitch("page", "good"));
+  part1Flowchart.appendChild(createSwitch("page", "bad"));
 
   //appening all parts
   content.appendChild(part1Flowchart);

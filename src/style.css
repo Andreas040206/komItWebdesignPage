@@ -66,10 +66,45 @@ body {
 
 .infoDot2 {
   top: 146px;
-  right: 1750px;
+  right: 1770px;
 }
 
 /* InfoDots End */
+
+/* Switch */
+.switchCon {
+  padding: 15px;
+  position: absolute;
+  right: 50px;
+  top: 30px;
+}
+
+.pageSwitchCon {
+  top: 260px;
+}
+
+.switchBall {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background-color: #d9d9d9ff;
+  position: absolute;
+  right: 70px;
+  top: 22px;
+  transition: 0.3s;
+}
+
+.badSwitchBall {
+  right: 22px;
+}
+
+.switchBorder {
+  height: 56px;
+  width: 103px;
+  border: solid 4px black;
+  border-radius: 60px;
+}
+/* Switch End*/
 
 /* header */
 
@@ -113,50 +148,13 @@ body {
   align-self: flex-end;
 }
 
-.headerSwitchCon {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding: 15px;
-  margin-right: 2vw;
-}
-
-.pageSwitchCon {
-  align-items: flex-start;
-}
-
-.goodHeaderSwitch {
-  height: 65px;
-  width: auto;
-}
-
-.goodSwitchBall {
-  height: 50px;
-  width: 50px;
-  border-radius: 50px;
-  background-color: #d9d9d9ff;
-  position: absolute;
-  right: calc(2vw + 70px);
-  top: 47px;
-  transition: 0.3s;
-  transition: all 1 ease-in;
-}
-
-.badSwitchBall {
-  right: calc(2vw + 24px);
-}
-
-.pageSwitch {
-  top: 272px;
-}
-
 .headerMid {
   height: 35%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   flex-direction: row;
-  padding-right: 30px;
+  padding-right: 60px;
 }
 
 .headerMidCon {
@@ -189,7 +187,7 @@ body {
 /* Bad Header */
 
 .badHeaderCon {
-  background-color: #0099ff;
+  background-color: #0000ffff;
 }
 
 /* Bad Header end*/
