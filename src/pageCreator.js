@@ -2,8 +2,6 @@ import { first } from "lodash";
 import { createHeaderElement } from "./pageEl/header";
 import { createHomepage } from "./pageEl/homepage";
 import { createFlowchartPage } from "./pageEl/flowchart";
-import goodSwitch from "./img/goodHeaderSwitch.png";
-import badSwitch from "./img/badHeaderSwitch.png";
 import { btnActiveded } from "./controller";
 
 const pageLoader = function (currentPage, goodOrBadHeader, goodOrBadPage) {
