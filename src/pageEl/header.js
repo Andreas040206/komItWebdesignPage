@@ -75,6 +75,14 @@ const createGoodHeaderEl = function (currentPage) {
     btnActiveded.changepage("homePage");
   });
 
+  let flowchartBtn = document.createElement("div");
+  flowchartBtn.classList.add("menuBtn");
+  flowchartBtn.textContent = "Flowchart";
+
+  flowchartBtn.addEventListener("click", function () {
+    btnActiveded.changepage("flowchartPage");
+  });
+
   let colorBtn = document.createElement("div");
   colorBtn.classList.add("menuBtn");
   colorBtn.textContent = "Color";
@@ -85,7 +93,7 @@ const createGoodHeaderEl = function (currentPage) {
 
   let gestaltsLawsBtn = document.createElement("div");
   gestaltsLawsBtn.classList.add("menuBtn");
-  gestaltsLawsBtn.textContent = "The Gestalts Principles";
+  gestaltsLawsBtn.textContent = "Gestalts principles";
 
   let layoutBtn = document.createElement("div");
   layoutBtn.classList.add("menuBtn");
@@ -111,8 +119,9 @@ const createGoodHeaderEl = function (currentPage) {
     homeBtn.classList.add("selectedMenuBtn");
   } else if (currentPage === "testingPage") {
     testingBtn.classList.add("selectedMenuBtn");
+  } else if (currentPage === "flowchartPage") {
+    flowchartBtn.classList.add("selectedMenuBtn");
   }
-
   headerMidCon.appendChild(homeBtn);
   headerMidCon.appendChild(testingBtn);
   headerMidCon.appendChild(usabilityBtn);
@@ -121,6 +130,7 @@ const createGoodHeaderEl = function (currentPage) {
   headerMidCon.appendChild(gestaltsLawsBtn);
   headerMidCon.appendChild(textBtn);
   headerMidCon.appendChild(colorBtn);
+  headerMidCon.appendChild(flowchartBtn);
 
   headerMid.appendChild(headerMidCon);
 

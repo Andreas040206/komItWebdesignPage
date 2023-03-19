@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
 body {
   margin: 0px;
@@ -6,6 +6,24 @@ body {
   height: 200vh;
 }
 
+/* Text types */
+.textHeader {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.smallTextHeader {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.textNormal {
+  font-size: 25px;
+}
+
+/* Text types */
+
+/* Infodots   */
 .infoDot {
   width: 30px;
   height: 30px;
@@ -48,8 +66,10 @@ body {
 
 .infoDot2 {
   top: 146px;
-  right: calc(14vw + 1355px);
+  right: 1750px;
 }
+
+/* InfoDots End */
 
 /* header */
 
@@ -101,6 +121,10 @@ body {
   margin-right: 2vw;
 }
 
+.pageSwitchCon {
+  align-items: flex-start;
+}
+
 .goodHeaderSwitch {
   height: 65px;
   width: auto;
@@ -111,10 +135,19 @@ body {
   width: 50px;
   border-radius: 50px;
   background-color: #d9d9d9ff;
-  position: fixed;
+  position: absolute;
   right: calc(2vw + 70px);
   top: 47px;
   transition: 0.3s;
+  transition: all 1 ease-in;
+}
+
+.badSwitchBall {
+  right: calc(2vw + 24px);
+}
+
+.pageSwitch {
+  top: 272px;
 }
 
 .headerMid {
@@ -123,7 +156,7 @@ body {
   justify-content: flex-end;
   align-items: flex-end;
   flex-direction: row;
-  padding-right: calc(14vw - 200px);
+  padding-right: 30px;
 }
 
 .headerMidCon {
@@ -162,3 +195,38 @@ body {
 /* Bad Header end*/
 
 /* header End */
+
+/* FlowchartPage */
+
+.flowchartPageCon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FlowchartPart {
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 900px 1fr;
+  width: 100%;
+}
+
+.part1MidContet {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  padding-top: 80px;
+}
+
+/* Flowchart Program */
+
+.FlowchartCon {
+  margin-top: 100px;
+  height: 1000px;
+  width: 1400px;
+  background-color: #f7f7f7;
+}
+
+/* Flowchart Program End */
+
+/* FlowchartPage End */

@@ -21,6 +21,11 @@ const btnActiveded = {
     startPage();
   },
   homepage: {},
+  goodOrBadPage: function (goodOrBad) {
+    goodOrBadPage = goodOrBad;
+    removeChildren(document.body);
+    startPage();
+  },
 };
 
 export { btnActiveded, startPage };
