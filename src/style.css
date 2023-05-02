@@ -23,6 +23,49 @@ body {
 
 /* Text types */
 
+/* Basic layout*/
+.pagePart {
+  display: grid;
+  grid-template-columns: 1fr 900px 1fr;
+  width: 100%;
+  overflow: hidden;
+}
+
+.textCon {
+  display: flex;
+  flex-direction: column;
+}
+
+.bgColorEl {
+  width: 100%;
+  height: 100%;
+}
+
+.smoothCon {
+  height: 100%;
+  width: 40px;
+}
+
+.smoothRightConSide {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  justify-self: flex-start;
+}
+
+.smoothLeftConSide {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  justify-self: flex-end;
+  width: 60px;
+}
+
+.dislocatedText {
+  position: relative;
+  right: calc(800px - 50vw);
+}
+
+/* Basic layout End*/
+
 /* Infodots   */
 .infoDot {
   width: 30px;
@@ -36,7 +79,6 @@ body {
 .infoDot:hover {
   width: 650px;
   height: 650px;
-  padding: 10px;
   background-color: black;
 }
 
@@ -49,24 +91,49 @@ body {
 .infoDot1 {
   top: 55px;
   left: 28px;
+  z-index: 1;
 }
 
-.infoDot1Image {
+.infoDot3 {
+  top: 550px;
+  right: calc(50vw - 600px);
+  z-index: 2;
+}
+
+.infoDot3:hover {
+  height: 500px;
+}
+
+.infoDot4 {
+  top: 981px;
+  left: calc(50vw - 250px);
+}
+
+.infoDot4:hover {
+  height: 150px;
+}
+
+.infoDotImage {
+  height: auto;
+  width: 570px;
+}
+
+.infoDotEl {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  opacity: 0;
   height: 30px;
   width: 30px;
+  overflow: hidden;
   transition: 0.5s;
-  opacity: 0;
 }
 
-.infoDot1Image:hover {
-  height: 650px;
-  width: 650px;
+.infoDotEl:hover {
   opacity: 1;
-}
-
-.infoDot2 {
-  top: 146px;
-  right: 1770px;
+  height: 590px;
+  width: 590px;
+  padding: 40px;
 }
 
 /* InfoDots End */
@@ -110,7 +177,7 @@ body {
 
 /* Shared Header */
 .headerCon {
-  height: 200px;
+  height: 220px;
   display: flex;
   flex-direction: column;
 }
@@ -151,10 +218,15 @@ body {
 .headerMid {
   height: 35%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: flex-end;
   flex-direction: row;
   padding-right: 60px;
+}
+
+.headerMidFill {
+  height: 20px;
+  width: 100px;
 }
 
 .headerMidCon {
@@ -164,9 +236,11 @@ body {
 
 .menuBtn {
   font-size: 30px;
-  padding: 6px 40px;
+  width: 140px;
+  padding: 6px;
   transition: 0.2s;
   user-select: none;
+  text-align: center;
 }
 
 .menuBtn:hover {
@@ -182,7 +256,7 @@ body {
   height: 5%;
   background-color: black;
 }
-/* Good header */
+/* Good header End */
 
 /* Bad Header */
 
@@ -200,31 +274,74 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 80px;
 }
 
-.FlowchartPart {
-  padding-top: 50px;
-  display: grid;
-  grid-template-columns: 1fr 900px 1fr;
-  width: 100%;
+.flowchartImg {
+  width: 900px;
 }
-
-.part1MidContet {
-  display: flex;
-  gap: 16px;
-  flex-direction: column;
-  padding-top: 80px;
-}
-
-/* Flowchart Program */
-
-.FlowchartCon {
-  margin-top: 100px;
-  height: 1000px;
-  width: 1400px;
-  background-color: #f7f7f7;
-}
-
-/* Flowchart Program End */
 
 /* FlowchartPage End */
+
+/* Color Page */
+
+.leftMonoColor {
+  position: absolute;
+  height: 261.6px;
+  width: 900px;
+  right: calc(50vw + 444px);
+}
+
+.monocolorCon {
+  background-image: url(./img/rightMonoColor.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.goodColorPageCon {
+  padding-top: 80px;
+  height: 2400px;
+}
+
+.colorwheelImgCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.colorwheelImg {
+  width: 600px;
+}
+
+.badColorPageCon {
+  background-color: yellow;
+  padding-top: 80px;
+  height: 2400px;
+}
+
+/* Color Page End */
+
+/* Homepage  */
+
+.badHomepageCon {
+  padding-bottom: 500px;
+}
+
+.switchWithArrowImg {
+  height: 200px;
+  width: 650px;
+  align-self: center;
+}
+
+/* Homepage END */
+
+/* Fontspage */
+
+.fontsPageCon {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fontspage END */
